@@ -2,9 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="CRehjQR1EXnFRFnHbs4YkN5Hv_U6YcAf2x8yEocPWBc" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    
     <title>إناث - متجر إلكتروني</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
@@ -13,7 +11,7 @@
 </head>
 <body>
 
-    <!-- Navbar للشاشات الكبيرة -->
+    <!-- Navbar Desktop -->
     <nav class="navbar-desktop">
         <div class="nav-container">
             <div class="logo">
@@ -24,7 +22,8 @@
             </div>
             <div class="search-box">
                 <i class="fas fa-search"></i>
-                <input type="text" placeholder="ابحث عن منتج..." id="searchInput">
+                <input type="text" placeholder="ابحث عن منتج..." id="searchInputDesktop">
+                <div id="suggestionsDesktop" class="suggestions-box"></div>
             </div>
             <ul class="nav-links">
                 <li><a href="#" class="active">الرئيسية</a></li>
@@ -36,30 +35,33 @@
         </div>
     </nav>
 
-    <!-- Navbar للشاشات الصغيرة (بدون عربة، مع زر بحث) -->
+    <!-- شريط بحث للجوال (يظهر فقط في الشاشات الصغيرة) -->
+    <div class="mobile-search-bar">
+        <div class="mobile-search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInputMobile" placeholder="ابحث عن منتج...">
+            <button id="clearMobileSearch" class="clear-search-btn">✕</button>
+        </div>
+        <div id="suggestionsMobile" class="suggestions-box mobile-suggestions"></div>
+    </div>
+
+    <!-- Navbar Mobile (أيقونات سفلى) -->
     <div class="navbar-mobile">
         <div class="mobile-nav-item active" data-page="home">
             <i class="fas fa-home"></i>
             <span>الرئيسية</span>
         </div>
-        <div class="mobile-nav-item" id="mobileSearchBtn">
-            <i class="fas fa-search"></i>
-            <span>بحث</span>
-        </div>
         <div class="mobile-nav-item" data-page="categories">
             <i class="fas fa-th-large"></i>
             <span>الفئات</span>
         </div>
+        <div class="mobile-nav-item" data-page="contact">
+            <i class="fas fa-envelope"></i>
+            <span>اتصال</span>
+        </div>
     </div>
 
     <!-- حاوية الإعلانات -->
-    <!-- <div class="ads-slider-container">
-        <div class="ads-slider" id="adsSlider"></div>
-        <button class="slider-btn prev" id="prevAdBtn">❮</button>
-        <button class="slider-btn next" id="nextAdBtn">❯</button>
-    </div> -->
-
-    <!-- حاوية الإعلانات (بدون سكرول يدوي) -->
     <div class="ads-slider-container">
         <div class="ads-slider" id="adsSlider"></div>
         <button class="slider-btn prev" id="prevAdBtn">❮</button>
@@ -70,7 +72,7 @@
     <!-- شبكة الفئات -->
     <div class="categories-grid" id="categoriesGrid"></div>
 
-    <!-- نافذة عرض المنتجات المنبثقة -->
+    <!-- نافذة عرض المنتجات -->
     <div class="products-section" id="productsSection" style="display: none;">
         <div class="products-header">
             <button class="close-products" id="closeProductsBtn"><i class="fas fa-times"></i></button>
@@ -111,9 +113,9 @@
             </div>
             <div class="footer-section">
                 <h4>تواصل معنا</h4>
-                <p><i class="fas fa-phone"></i> <a href="tel:+9665XXXXXXX">+963 954-879-356</a></p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:info@anath.com">ahmadkelaui166@gmail.com</a></p>
-                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/9665XXXXXXX" target="_blank">واتساب: </a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+9665XXXXXXX">+966 5XXXXXXX</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@anath.com">info@anath.com</a></p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/9665XXXXXXX" target="_blank">واتساب: +966 5XXXXXXX</a></p>
             </div>
             <div class="footer-section">
                 <h4>تابعنا</h4>
@@ -131,6 +133,6 @@
 
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
-    <script src="assets/js/main1.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

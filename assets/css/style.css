@@ -168,13 +168,17 @@ body {
 
 .ad-text {
     position: absolute;
-    bottom: 20px;
+    top: 20px;
     right: 20px;
+    left: auto;
     background: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 5px 15px;
-    border-radius: 30px;
-    z-index: 5;
+    padding: 8px 20px;
+    border-radius: 40px;
+    z-index: 15;
+    font-size: 1rem;
+    max-width: 80%;
+    text-align: center;
 }
 
 .slider-btn {
@@ -579,10 +583,13 @@ body {
     }
 
     .ad-text {
+        top: 10px;
         font-size: 0.7rem;
         padding: 4px 12px;
-        bottom: 10px;
-        right: 10px;
+        max-width: 90%;
+        .slider-dots{
+            bottom: 5px;
+        }
     }
 
     .slider-btn {
@@ -632,4 +639,138 @@ body {
     .categories-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+/* إضافة أنماط شريط البحث للجوال */
+.mobile-search-bar {
+    display: none;
+    padding: 10px 15px;
+    background: white;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.mobile-search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f9f9f9;
+    border-radius: 50px;
+    border: 1px solid #ddd;
+    padding: 5px 15px;
+}
+
+.mobile-search-container i {
+    color: #aaa;
+    font-size: 1rem;
+}
+
+.mobile-search-container input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px 0;
+    font-size: 1rem;
+    font-family: 'Tajawal', sans-serif;
+    outline: none;
+}
+
+.clear-search-btn {
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 0 5px;
+    display: none;
+}
+
+.clear-search-btn:hover {
+    color: #e5989b;
+}
+
+.mobile-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    margin-top: 5px;
+    display: none;
+}
+
+/* للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .navbar-desktop {
+        display: none;
+    }
+    .mobile-search-bar {
+        display: block;
+    }
+    .navbar-mobile {
+        display: flex;
+    }
+    /* تعديلات أخرى موجودة سابقاً */
+}
+
+/* باقي الأنماط (الإعلانات، الفئات، المنتجات، إلخ) تبقى كما هي دون تغيير */
+/* تأكد من نسخ باقي الـ CSS من ملفك القديم الذي يعمل بشكل جيد */
+
+/* تحسين شكل الاقتراحات */
+.suggestions-box {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    margin-top: 8px;
+    border: 1px solid #eee;
+}
+
+.suggestion-item {
+    padding: 12px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover {
+    background-color: #f9f9f9;
+    padding-right: 20px; /* حركة بسيطة عند المرور */
+}
+
+/* للجوال */
+.mobile-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1000;
+    margin-top: 5px;
+    display: none;
+    border: 1px solid #eee;
 }
