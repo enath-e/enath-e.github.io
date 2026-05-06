@@ -105,14 +105,14 @@ firebase.auth().onAuthStateChanged((user) => {
     // التحقق من حالة المستخدم - منع الوصول المباشر
     auth.onAuthStateChanged((user) => {
         if (!user) {
-            window.location.href = 'login-7Xy2Qr9ZkP4mN9wX.html';
+            window.location.href = 'login-9k2F7dL3xP1qZ8mW.html';
         }
     });
 
     // تسجيل الخروج
     document.getElementById('logoutBtn').addEventListener('click', () => {
         auth.signOut().then(() => {
-            window.location.href = 'login-7Xy2Qr9ZkP4mN9wX.html';
+            window.location.href = 'login-9k2F7dL3xP1qZ8mW.html';
         });
     });
 
