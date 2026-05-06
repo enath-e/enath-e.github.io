@@ -46,6 +46,10 @@
     };
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
+    // ضبط الجلسة لتنتهي عند إغلاق المتصفح
+firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
+   .then(() => console.log("جلسة SESSION مفعلة"))
+   .catch((error) => console.error("خطأ في تعيين الجلسة:", error));
 
     const loginBtn = document.getElementById('loginButton');
     const emailInput = document.getElementById('loginEmail');
