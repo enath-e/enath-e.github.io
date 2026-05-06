@@ -548,6 +548,7 @@ function showLoading() {
             <p style="color: #6d6875; font-size: 1.2rem; margin-bottom: 1.5rem;">في متجر إناث</p>
             <div style="width: 40px; height: 40px; margin: 0 auto; border: 4px solid #e5989b; border-top-color: #b5838d; border-radius: 50%; animation: spin 1s linear infinite;"></div>
             <p style="color: #b5838d; margin-top: 1rem; font-size: 0.9rem;">جاري التحميل...</p>
+            <p style="color:#b5838d; margin-top: 1rem; font-size: 0.7rem;">تصميم وتطوير: أحمد كلاوي</p>
         </div>
     `;
     
