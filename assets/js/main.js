@@ -425,6 +425,7 @@ if (mobileInput) {
             clearMobileBtn.style.display = 'none';
             document.getElementById('productsSection').style.display = 'none';
             document.body.style.overflow = 'auto';
+            
         });
     }
 }
@@ -575,6 +576,9 @@ function hideLoading() {
     const loader = document.getElementById('globalLoader');
     if (loader) loader.style.display = 'none';
 }
+
+
+
 
 // ===================== بدء التطبيق =====================
 loadData();
