@@ -1,13 +1,13 @@
 // ===================== إعدادات Firebase =====================
-const firebaseConfig = {
-    apiKey: "AIzaSyD6CcJDUiXgCQxe_aL_j2aEi1nuQ2x2o5s",
-    authDomain: "enath-7d5e8.firebaseapp.com",
-    databaseURL: "https://enath-7d5e8-default-rtdb.firebaseio.com",
-    projectId: "enath-7d5e8",
-    storageBucket: "enath-7d5e8.firebasestorage.app",
-    messagingSenderId: "101026768739",
-    appId: "1:101026768739:web:c3635b04e972914a5b1556"
-};
+  const firebaseConfig = {
+    apiKey: "AIzaSyD9BbiQfVKWazBtuXE-g0HRkkq87qNY080",
+    authDomain: "enath11.firebaseapp.com",
+    databaseURL: "https://enath11-default-rtdb.firebaseio.com",
+    projectId: "enath11",
+    storageBucket: "enath11.firebasestorage.app",
+    messagingSenderId: "1092002726764",
+    appId: "1:1092002726764:web:20626338f00627d82ae949"
+  };
 
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
